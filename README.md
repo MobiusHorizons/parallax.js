@@ -53,7 +53,7 @@ each setpoint has the following properties:
         scale     : [1]         // original zoom.
       },
       {
-        pos       : [100,1000], // bottom-right corner
+        pos       : [100,100], // bottom-right corner
         translate : [10, 10],   // offset 10%, 10%
         rotate    : [0, 45],    // rotated 45deg about the Y axis.
         scale     : [1]         // original zoom.
