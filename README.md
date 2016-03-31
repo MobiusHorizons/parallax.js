@@ -18,9 +18,9 @@ This returns the view object to which you add the dynamic elements with their pr
 
 
 
-## (view).append
+## (view).add
 
-Function `append` adds an element to the animation loop, and describes how it will move.
+Function `add` adds an element to the animation loop, and describes how it will move.
 ```
 @parameter element   This is the element to be animated.
 @parameter setpoints this is an array of points where the configuration is specified.
@@ -45,7 +45,7 @@ each setpoint has the following properties:
    * based on how close the mouse is to *pos*.
    *******/
 
-  view.append(item1, [
+  view.add(item1, [
       {
         pos       : [0,0],      // top-left corner
         translate : [-10, -10], // offset -10%, -10%

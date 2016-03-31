@@ -9,7 +9,7 @@ console.log(viewport);
 var view = parallax.init(viewport);
 
 
-   view.append(layer1, [
+   view.add(layer1, [
     {
       pos : [0, 0],
       translate : [-10, -10],
@@ -43,7 +43,7 @@ var view = parallax.init(viewport);
   ]);
 
 
-   view.append(layer2, [
+   view.add(layer2, [
     {
       pos : [0, 0],
       translate : [-5, -5],
@@ -70,7 +70,7 @@ var view = parallax.init(viewport);
     }
   ]);
 
-   view.append(layer3, [
+   view.add(layer3, [
     {
       pos : [0, 0],
       translate : [-15, -5],

@@ -11,7 +11,7 @@ var init = function(viewport){
     viewport : viewport
   };
 
-  view.append = actions.append(view);
+  view.add = actions.add(view);
 
   viewport.addEventListener('mousemove', actions.renderer(view));
   return view;

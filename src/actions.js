@@ -28,11 +28,11 @@ var renderer = function(view){
   }
 }
 
-var append = function(view){
+var add = function(view){
   return function(element, setpoints){
     view.layers.push({ element: element, setpoints : setpoints});
   }
 }
 
-exports.append = append;
+exports.add = add;
 exports.renderer = renderer;
