@@ -43,32 +43,7 @@ var view = parallax.init(viewport);
   ]);
 
 
-   view.add(layer2, [
-    {
-      pos : [0, 0],
-      translate : [-5, -5],
-      rotate : [0,-10],
-      scale : [1]
-    },
-    {
-      pos : [0, 100],
-      translate : [-5, 5],
-      rotate : [0, -10],
-      scale : [1]
-    },
-    {
-      pos : [100, 0],
-      translate : [5, -5],
-      rotate : [0, 10],
-      scale : [1]
-    },
-    {
-      pos : [100, 100],
-      translate : [5, 5],
-      rotate : [0,10],
-      scale : [1]
-    }
-  ]);
+   view.add(layer2, parallax.uniform(10));
 
    view.add(layer3, [
     {

@@ -3,6 +3,7 @@
  */
 
 var actions = require("./actions");
+var utils   = require("./utils");
 
 var init = function(viewport){
   console.log(viewport);
@@ -18,3 +19,4 @@ var init = function(viewport){
 }
 
 exports.init = init;
+exports.uniform = utils.uniform;

@@ -65,5 +65,36 @@ var getOffset = function(element){
   return offset;
 }
 
+
+var uniform = function(p){
+  return [
+    {
+      pos: [0,0],
+      translate : [-1 * p, -1 * p],
+      rotate: [0,0],
+      scale : [1]
+    },
+    {
+      pos: [100,0],
+      translate : [p, -1 * p],
+      rotate: [0,0],
+      scale : [1]
+    },
+    {
+      pos: [0,100],
+      translate : [-1 * p, p],
+      rotate: [0,0],
+      scale : [1]
+    },
+    {
+      pos: [100,100],
+      translate : [p, p],
+      rotate: [0,0],
+      scale : [1]
+    }
+  ];
+};
+
 exports.interpolate = interpolate;
 exports.getOffset = getOffset;
+exports.uniform = uniform;

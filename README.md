@@ -17,6 +17,15 @@ Return :
 This returns the view object to which you add the dynamic elements with their properties.
 
 
+## (parallax).uniform
+
+Utility Function `uniform` is used for generating standard percentage based deviation configurations
+
+Param: 
+percentage -- the percentage deviation.
+
+Return: 
+a configuration that can be passed to [add](#viewadd) 
 
 ## (view).add
 
