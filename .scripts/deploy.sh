@@ -4,7 +4,6 @@ set -e
 rm -rf out || exit 0
 mkdir out;
 
-npm install
 node_modules/.bin/webpack
 
 # copy built assets
