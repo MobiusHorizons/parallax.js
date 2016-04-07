@@ -3,10 +3,10 @@ var path = require('path');
 module.exports = {
   entry : {
     'demo-app' : "./main.js",
-    lib  : "./src/browser.js"
+    parallax  : "./src/browser.js"
   },
   output: {
-    path : path.join(__dirname, 'lib'),
+    path : path.join(__dirname, 'dist'),
     filename : "[name].js",
   },
   devtool : "source-map",

@@ -15,7 +15,7 @@ var renderer = function(view){
       var tl = layer.topLeft;
       var br = layer.bottomRight;
 
-      var css = utils.interpolate(layer.setpoints, pos);
+      var css = utils.interpolate(layer.setpoints, pos, layer.exponent);
       var t = css.translate,
           r = css.rotate,
           s = css.scale
@@ -29,8 +29,9 @@ var renderer = function(view){
 }
 
 var add = function(view){
-  return function(element, setpoints){
-    view.layers.push({ element: element, setpoints : setpoints});
+  return function(element, setpoints, exponent){
+    exponent = exponent || 1;
+    view.layers.push({ element: element, exponent : exponent, setpoints : setpoints});
   }
 }
 

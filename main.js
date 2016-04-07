@@ -72,4 +72,39 @@ var view = parallax.init(viewport);
     }
   ]);
 
+  view.add(matrix, parallax.uniform(0));
+
+  view.matrix([[m11, m12, m13],
+               [m21, m22, m23],
+               [m31, m32, m33]
+              ],
+              [
+                {
+                  pos : [10,40],
+                  explode: 0,
+                  rotate: 0
+                },
+                {
+                  pos : [50, 40],
+                  explode : 0,
+                  rotate: 0
+                },
+                {
+                  pos : [10, 80],
+                  explode : 0,
+                  rotate: 0
+                },
+                {
+                  pos : [50, 80],
+                  explode : 0,
+                  rotate: 0
+                },
+                {
+                  pos : [30, 60],
+                  explode : 3,
+                  rotate: 0
+                }
+              ], 5);
+              
+
 

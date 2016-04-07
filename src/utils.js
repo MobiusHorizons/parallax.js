@@ -4,7 +4,6 @@
 
 var average_by = function(weights){
   var total = weights.reduce(function(prev, current){return current + prev});
-  console.log(total, weights);
   return function(prev, current, idx){
     if (idx == 1){
       var w = weights[0] / total;
@@ -20,7 +19,8 @@ var average_by = function(weights){
   }
 }
 
-var interpolate = function(setpoints, pos){
+var interpolate = function(setpoints, pos, exponent){
+  exponent = exponent || 1;
   var positions = [];
   var translations = [];
   var rotations = [];
@@ -32,7 +32,7 @@ var interpolate = function(setpoints, pos){
     rotations.push(setpoints[i].rotate)
     scale.push(setpoints[i].scale)
   }
-  var weights = weight(positions, pos);
+  var weights = weight(positions, pos, exponent);
 
   var out = {};
   out.translate = translations.reduce(average_by(weights));
@@ -41,13 +41,16 @@ var interpolate = function(setpoints, pos){
   return out;
 };
 
-var weight = function(positions, pos){
+var weight = function(positions, pos, exponent){
+  exponent = exponent || 1;
   var total = positions.length;
   var out = [];
   for (p of positions){
     var x = p[0] / 100;
     var y = p[1] / 100;
-    out.push( (1 - Math.abs(pos.x - x) ) * (1 - Math.abs(pos.y - y) ) );
+    var w = Math.sqrt(Math.pow(Math.abs(pos.x - x),2) +   
+                      Math.pow(Math.abs(pos.y - y),2));
+    out.push(Math.pow(1 - w, exponent));
   }
   return out;
 };

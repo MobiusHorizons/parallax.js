@@ -49,3 +49,18 @@
   color: #992222;
   background: rgba(0,0,0,.7);
 }
+
+#matrix {
+  position: absolute;
+  left: 20%;
+  bottom: 30%;
+}
+
+#matrix .row{
+  font-size: 0px;
+}
+
+img.fragment{
+  height: 40px;
+  width: 40px;
+}
