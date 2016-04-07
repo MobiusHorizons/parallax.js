@@ -5,7 +5,6 @@ var viewport = document.getElementById('viewport');
 var layer1 = document.getElementById('layer1');
 
 
-console.log(viewport);
 var view = parallax.init(viewport);
 
 

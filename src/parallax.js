@@ -39,7 +39,6 @@ var matrix = function(view){
 };
 
 var init = function(viewport){
-  console.log(viewport);
   var view = {
     layers : [],
     viewport : viewport
@@ -49,6 +48,8 @@ var init = function(viewport){
   view.matrix = matrix(view);
 
   viewport.addEventListener('mousemove', actions.renderer(view));
+  viewport.addEventListener('touchstart', actions.renderer(view));
+  viewport.addEventListener('touchmove', actions.renderer(view));
   return view;
 }
 

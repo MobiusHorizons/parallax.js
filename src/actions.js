@@ -7,10 +7,18 @@ var utils = require('./utils');
 var renderer = function(view){
   return function(e){
     var offset = utils.getOffset(view.viewport);
-    var pos = {  
-      x : (e.clientX - offset.left) / offset.width,
-      y : (e.clientY - offset.top ) / offset.height,
-    };
+    var pos = {};
+    if (e.type === "mousemove"){
+      pos = {  
+        x : (e.clientX - offset.left) / offset.width,
+        y : (e.clientY - offset.top ) / offset.height,
+      }
+    } else {
+      pos = {
+        x : (e.changedTouches[0].clientX - offset.left) / offset.width,
+        y : (e.changedTouches[0].clientY - offset.top ) / offset.height,
+      }
+    }
     for (layer of view.layers){
       var tl = layer.topLeft;
       var br = layer.bottomRight;
