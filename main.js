@@ -102,7 +102,7 @@ var view = parallax.init(viewport);
                 {
                   pos : [30, 60],
                   explode : 3,
-                  rotate: 0
+                  rotate: 45
                 }
               ], 5);
               
